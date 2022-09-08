@@ -1,0 +1,81 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.heroBanner {
+  padding: 5rem;
+  background: #FFF5EB;
+  position: relative;
+  padding-bottom: 0;
+  margin-bottom: 150px;
+}
+
+.heroBanner:after {
+  position: absolute;
+  background: #FFF5EB;
+  height: 150px;
+  width: 100%;
+  top: 100%;
+  left: 0;
+    content: "";
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    50% 100%
+  );
+}
+
+.heroContent {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.heroTitle {
+  font-size: 100px;
+  letter-spacing: 5px;
+  margin-bottom: 0;
+}
+
+.heroSubtitle {
+  margin-bottom: 2.5rem;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 3rem 1rem;
+    margin-bottom: 0;
+  }
+  .heroBanner:after {
+    display: none;
+  }
+  .heroContent {
+    text-align: center;
+    justify-content: center;
+  }
+  .heroContent img {
+    display: none;
+  }
+}
+
+.heroButton {
+  display: inline-block;
+  line-height: 50px;
+  background: var(--ifm-color-primary-light);
+  color: var(--ifm-color-content-inverse);
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+  padding: 0px 50px;
+  text-transform: uppercase;
+  box-shadow: 5px 5px 0px var(--ifm-color-primary-darkest);
+}
+
+.heroButton:hover {
+  text-decoration: none;;
+  transition: all 0.2s;
+  color: var(--ifm-color-content-inverse);
+  background: var(--ifm-color-primary-lighter);
+  box-shadow: 6px 6px 0px var(--ifm-color-primary-darkest);
+}
