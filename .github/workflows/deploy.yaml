@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - init
   repository_dispatch:
     types: [zui-docs-update]
   workflow_dispatch:
