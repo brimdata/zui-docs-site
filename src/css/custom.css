@@ -28,7 +28,8 @@
   --ifm-color-primary-lightest: #ff9832;
 
   --ifm-font-size-base: 110%;
-}
+  
+} 
 
 @media screen and (max-width: 996px) {
   :root {

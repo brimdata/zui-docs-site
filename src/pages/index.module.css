@@ -1,81 +1,132 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
-.heroBanner {
-  padding: 5rem;
-  background: #FFF5EB;
-  position: relative;
-  padding-bottom: 0;
-  margin-bottom: 150px;
+.html {
+  --dark-blue: #001123;
+  --transparent-orange: hsla(30 100% 50% / 0.4);
+ 
+  --ifm-background-color: var(--dark-blue);
+  
+  /** Navbar **/
+  --ifm-navbar-background-color: var(--dark-blue);
+  --ifm-navbar-link-color: white;
 }
 
-.heroBanner:after {
-  position: absolute;
-  background: #FFF5EB;
-  height: 150px;
-  width: 100%;
-  top: 100%;
-  left: 0;
-    content: "";
-  clip-path: polygon(
-    0 0,
-    100% 0,
-    50% 100%
-  );
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.heroContent {
+.heroContainer {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  width: 800px;
+  height: 280px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  position:relative;
+}
+
+.heroLeftSide {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: space-between;
 }
 
-.heroTitle {
-  font-size: 100px;
-  letter-spacing: 5px;
-  margin-bottom: 0;
+.heroRightSide {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.heroSubtitle {
-  margin-bottom: 2.5rem;
+.downloadSection .primaryButton {
+  margin-bottom: 12px
+}
+ 
+.titles h1 {
+  margin: 0;
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 3rem 1rem;
-    margin-bottom: 0;
-  }
-  .heroBanner:after {
-    display: none;
-  }
-  .heroContent {
-    text-align: center;
-    justify-content: center;
-  }
-  .heroContent img {
-    display: none;
-  }
-}
 
-.heroButton {
-  display: inline-block;
-  line-height: 50px;
-  background: var(--ifm-color-primary-light);
-  color: var(--ifm-color-content-inverse);
-  font-weight: 700;
-  letter-spacing: 2px;
-  font-size: 1.2rem;
-  padding: 0px 50px;
+.boxedSubtitle {
+  color: white;
   text-transform: uppercase;
-  box-shadow: 5px 5px 0px var(--ifm-color-primary-darkest);
+  font-size: 30px;
+  line-height: 42px;
+  font-weight: 100;
+  letter-spacing: 2.77px;
+  border: 1px solid var(--orange);
+  display: inline-flex;
+  width: max-content;
+  padding: 0 10px;
+  border-radius: 4px;
+  box-shadow: 0 0 9px 3px var(--transparent-orange);
+  margin: 0;
 }
 
-.heroButton:hover {
-  text-decoration: none;;
-  transition: all 0.2s;
-  color: var(--ifm-color-content-inverse);
-  background: var(--ifm-color-primary-lighter);
-  box-shadow: 6px 6px 0px var(--ifm-color-primary-darkest);
+.primaryButton {
+  color: white;
+  font-family: var(--ifm-font-family-base);
+  background: var(--orange);
+  border-radius: 4px;
+  line-height: 42px;
+  font-size: 22px;
+  letter-spacing: 3px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-shadow: 1px 1px rgba(0,0,0,0.5);
+  box-shadow: 0 0 9px 3px var(--transparent-orange);
+  padding: 0 24px;
+  display: inline-block;
+  border: 1px solid black;;
+}
+
+.subText {
+  color: #808891;
+  font-size: 18px;
+  margin: 0;
+}
+
+.versionNumber {
+  position: absolute;
+  bottom: -36px;
+}
+
+.gridTexture {
+  --grid-color: rgba(255 255 255 / 0.15);
+  margin-top: var(--ifm-navbar-height);
+  position: relative;
+  background-size: 90px 90px;
+  background-position: 45px 45px;
+  background-image: linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
+  linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
+}
+
+.radialGradient {
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background: radial-gradient(transparent 0, var(--dark-blue) 70%);  
+}
+
+.gridContent {
+  position: relative;
+  padding-bottom: 400px;
+}
+
+.dotTexture {
+  --dot-texture-color: 30 100% 50%;
+  height: 200px;
+  width: 200px;
+  background-size: 15px 15px;
+  background-image: radial-gradient(hsl(var(--dot-texture-color)) 0px, transparent 1px),
+  radial-gradient(hsla(var(--dot-texture-color) / 0.2) 0px, transparent 4px);
+}
+
+.dotTextureAlternate {
+  composes: dotTexture;
+  --dot-texture-color: 212 72% 59%;
 }
