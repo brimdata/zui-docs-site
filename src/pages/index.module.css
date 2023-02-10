@@ -17,15 +17,23 @@
 .heroContainer {
   display: flex;
   justify-content: space-between;
-  width: 800px;
-  height: 280px;
+  width: 100%;
+  max-width: 800px;
+  
   margin: 0 auto;
   margin-bottom: 100px;
   position:relative;
 }
 
+@media screen and (max-width: 650px) {
+    .heroContainer {
+      flex-direction: column;
+      gap: 32px;
+    }
+}
+
 .heroLeftSide {
-  height: 100%;
+  height: 280px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,7 +41,7 @@
 }
 
 .heroRightSide {
-  height: 100%;
+  height: 280px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,7 +49,7 @@
 }
 
 .downloadSection .primaryButton {
-  margin-bottom: 12px
+  margin-bottom: 12px;
 }
  
 .titles h1 {
@@ -57,12 +65,12 @@
   font-weight: 100;
   letter-spacing: 2.77px;
   border: 1px solid var(--orange);
-  display: inline-flex;
-  width: max-content;
+  display: inline-block;
   padding: 0 10px;
   border-radius: 4px;
   box-shadow: 0 0 9px 3px var(--transparent-orange);
-  margin: 0;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .primaryButton {
@@ -82,6 +90,14 @@
   border: 1px solid black;;
 }
 
+.primaryButton:hover {
+  text-decoration: none;
+  color: white;
+  transition: all 0.5s;
+  box-shadow: 0 0 18px 6px var(--transparent-orange);
+  transform: translateY(-2px);
+}
+
 .subText {
   color: #808891;
   font-size: 18px;
@@ -95,9 +111,10 @@
 
 .gridTexture {
   --grid-color: rgba(255 255 255 / 0.15);
-  margin-top: var(--ifm-navbar-height);
+  margin-top: -180px;
+  padding-top: 300px;
   position: relative;
-  background-size: 90px 90px;
+  background-size: 10vmin 10vmin;
   background-position: 45px 45px;
   background-image: linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
   linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
@@ -110,23 +127,139 @@
   right:0;
   bottom:0;
   background: radial-gradient(transparent 0, var(--dark-blue) 70%);  
+
 }
 
 .gridContent {
   position: relative;
-  padding-bottom: 400px;
+  padding-bottom: 100px;
 }
 
 .dotTexture {
   --dot-texture-color: 30 100% 50%;
-  height: 200px;
-  width: 200px;
-  background-size: 15px 15px;
+  height: 50%;
+  width: 33%;
+  background-size: 5% 5%;
   background-image: radial-gradient(hsl(var(--dot-texture-color)) 0px, transparent 1px),
   radial-gradient(hsla(var(--dot-texture-color) / 0.2) 0px, transparent 4px);
 }
 
-.dotTextureAlternate {
+.screenShot {
+  position: relative;
+  display: flex;
+  padding: 4%;
+  background: url(/img/decoration-swoosh.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 4000px 100%;
+}
+
+.screenShot img {
+  z-index: 2;
+  position: relative;
+  display: flex;
+  border-radius: 8px;
+  box-shadow: 0 0 10px 0px hsl(211deg 100% 7% / 0.6),
+    0 0 41px -5px rgb(255 255 255 / 0.6)
+}
+
+.dotTextureTopLeft {
   composes: dotTexture;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.dotTextureBottomRight {
   --dot-texture-color: 212 72% 59%;
+  composes: dotTexture;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+ 
+
+.taglineContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.tagline {
+  text-align: center;
+  font-weight: normal;
+  font-size: 30px;
+  color: white;
+  position: relative;
+  margin: 6rem 0;
+}
+
+@media screen and (max-width: 580px) {
+  .tagline em {
+    display: inline-block;
+    margin: 0 auto;
+  }
+}
+
+
+.tagline b {
+  font-weight: 900;
+  color: var(--orange);
+}
+
+.tagline em {
+  font-style: normal;
+  position: relative;
+}
+
+.tagline em:after {
+  content: "";
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  background-size: 12px;
+  background-image: linear-gradient(to right, var(--orange) 6px, transparent 6px);
+  box-shadow: 0 0 9px 3px var(--transparent-orange);
+}
+
+
+.features {
+  background-image: url(/img/decoration-lines.png);
+  background-position: center center;
+  background-size: 4000px 500px;
+  background-repeat: no-repeat;
+  min-height: 600px;
+  color: white;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10vh;
+}
+
+.features ul {
+  width: 100%;
+  padding: 0;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.features li {
+  text-transform: uppercase;
+  font-size: 30px;
+  letter-spacing: 2.77px;
+  list-style-type: none;
+  margin: 2em 0;
+}
+
+.features li:nth-child(even) {
+  text-align: right;
+}
+
+
+@media screen and (max-width: 700px) {
+  .features li {
+    text-align: center !important;
+  }
 }

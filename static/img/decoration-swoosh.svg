@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="4046" height="828" viewBox="0 0 4046 828">
+  <defs>
+    <linearGradient id="swooshes-c" x1="50%" x2="50%" y1="3.488%" y2="103.488%">
+      <stop offset="0%" stop-color="#FF7F00"/>
+      <stop offset="100%" stop-color="#A32222"/>
+    </linearGradient>
+    <path id="swooshes-b" d="M1119.9568,457.19221 C1467.83912,395.86606 2153.0646,0.124845 2557.68572,0.124845 C2962.30684,0.124845 4300.14955,278.78466 3945.76143,327.304269 C3788.14018,348.884341 2968.09916,283.00777 2557.68572,283.00777 C2147.27228,283.00777 1544.75599,737.938934 1119.9568,782.006622 C695.157613,826.074311 142.243666,613.044407 12.7789011,569.950997 C-116.685864,526.857586 772.074487,518.518359 1119.9568,457.19221 Z"/>
+    <filter id="swooshes-a" width="101.7%" height="108.9%" x="-.9%" y="-5.7%" filterUnits="objectBoundingBox">
+      <feOffset dy="-10" in="SourceAlpha" result="shadowOffsetOuter1"/>
+      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="10"/>
+      <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.300999781 0"/>
+    </filter>
+    <linearGradient id="swooshes-f" x1="50%" x2="50%" y1="3.488%" y2="103.488%">
+      <stop offset="0%" stop-color="#001123"/>
+      <stop offset="100%" stop-color="#003975"/>
+    </linearGradient>
+    <path id="swooshes-e" d="M1436.47899,417.882925 C1784.36131,356.556775 2188.85787,-1.13686838e-13 2593.47899,-1.13686838e-13 C2998.10011,-1.13686838e-13 4273.18378,312.163542 3953.68779,339.435797 C3820.04813,350.84331 2945.32014,282.882925 2593.47899,282.882925 C2183.06555,282.882925 1844.47899,739.078763 1436.47899,742.697338 C1028.47899,746.315912 725.450251,606.509253 24.1115662,356.259253 C-183.681678,282.114962 1088.59668,479.209075 1436.47899,417.882925 Z"/>
+    <filter id="swooshes-d" width="101.7%" height="109.4%" x="-.9%" y="-6.1%" filterUnits="objectBoundingBox">
+      <feOffset dy="-10" in="SourceAlpha" result="shadowOffsetOuter1"/>
+      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="10"/>
+      <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.300999781 0"/>
+    </filter>
+  </defs>
+  <g fill="none" fill-rule="evenodd" transform="translate(20.314 29.993)">
+    <use fill="#000" filter="url(#swooshes-a)" xlink:href="#swooshes-b"/>
+    <use fill="url(#swooshes-c)" xlink:href="#swooshes-b"/>
+    <g transform="matrix(1 0 0 -1 0 742.766)">
+      <use fill="#000" filter="url(#swooshes-d)" xlink:href="#swooshes-e"/>
+      <use fill="url(#swooshes-f)" xlink:href="#swooshes-e"/>
+    </g>
+  </g>
+</svg>
