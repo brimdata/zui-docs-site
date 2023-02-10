@@ -20,7 +20,7 @@ const config = {
 
   plugins: [
     // This plugin allows, e.g, docs/ to be a symlink to ../zui/docs/.
-    function(context, options) {
+    function (context, options) {
       return {
         name: "allow-symlinks-plugin",
         configureWebpack(config, isServer, utils) {
@@ -36,7 +36,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: ({docPath}) =>
+          editUrl: ({ docPath }) =>
             `https://github.com/brimdata/brim/edit/zuifi-wiki/docs/${docPath}`,
         },
         theme: {
@@ -72,7 +72,8 @@ const config = {
             label: "Docs",
           },
           {
-            type: "docsVersionDropdown",
+            href: "https://zed.brimdata.io/docs",
+            label: "Zed Docs",
             position: "right",
           },
           {
@@ -123,7 +124,7 @@ const config = {
         apiKey: "5b2387711eca356fb0d654336ae3f740",
         indexName: "zed-brimdata",
         externalUrlRegex: "zed\\.brimdata\\.io",
-      }
+      },
     }),
 };
 

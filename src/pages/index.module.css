@@ -14,6 +14,13 @@
   margin: 0 auto;
 }
 
+
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .heroContainer {
   display: flex;
   justify-content: space-between;
@@ -159,8 +166,7 @@
   position: relative;
   display: flex;
   border-radius: 8px;
-  box-shadow: 0 0 10px 0px hsl(211deg 100% 7% / 0.6),
-    0 0 41px -5px rgb(255 255 255 / 0.6)
+  box-shadow: 8px 8px 30px 8px hsl(211deg 100% 7% / 0.5)
 }
 
 .dotTextureTopLeft {
@@ -192,7 +198,8 @@
   font-size: 30px;
   color: white;
   position: relative;
-  margin: 6rem 0;
+  margin-top: 20vh;
+  margin-bottom: 5vh;
 }
 
 @media screen and (max-width: 580px) {
@@ -219,7 +226,7 @@
   width: 100%;
   position: absolute;
   left: 0;
-  bottom: -5px;
+  bottom: -10px;
   background-size: 12px;
   background-image: linear-gradient(to right, var(--orange) 6px, transparent 6px);
   box-shadow: 0 0 9px 3px var(--transparent-orange);
@@ -262,4 +269,35 @@
   .features li {
     text-align: center !important;
   }
+}
+
+.zedDescription {
+  text-align: center;
+  margin-top: rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 160px;
+  margin-bottom: 160px;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.zedDescription .primaryButton {
+  margin-top: 40px;
+}
+
+.zedDescription h3 {
+  font-size: 60px;
+  margin-bottom: 40px;
+}
+
+.zedDescription > *:nth-child(1) {
+  text-align: right;
+  flex: 1;
+}
+
+.zedDescription>*:nth-child(2) {
+  text-align: left;
+  flex: 1;
 }

@@ -9,6 +9,8 @@ export default function Home() {
   const iconUrl = useBaseUrl("img/zui-icon.svg");
   const textUrl = useBaseUrl("img/zui-text.svg");
   const screenshotUrl = useBaseUrl("img/zui-home-screenshot.png");
+  const zedLogoUrl = useBaseUrl("img/zed-logo.svg");
+
   return (
     <Layout
       title={`The Zed Project`}
@@ -66,11 +68,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className={clsx(styles.taglineContainer, styles.wrap)}>
-        <p className={styles.boxedSubtitle}>
-          Powered By <b>ZED</b>
-        </p>
-      </div>
 
       <div className={styles.features}>
         <ul>
@@ -80,6 +77,50 @@ export default function Home() {
           <li>Filters And Pivots</li>
         </ul>
       </div>
+      <div className={clsx(styles.wrap, styles.centered)}>
+        <p className={styles.boxedSubtitle}>
+          Powered By <b>ZED</b>
+        </p>
+      </div>
+      <div className={clsx(styles.zedDescription, styles.wrap)}>
+        <img
+          src={zedLogoUrl}
+          width={250}
+          height={250}
+          alt="Zed Logo: Two L-shaped bricks converging with the negative space forming a Z shape."
+        />
+        <div>
+          <h3>What Is Zed?</h3>
+          <p>
+            Zed is system for managing, storing, and processing data. It's a{" "}
+            <b>superset</b> of both schema-defined <b>tables</b>, and{" "}
+            <b>unstructured documents</b>; an emerging concept we call{" "}
+            <a href="https://zed.brimdata.io/docs/formats#2-zed-a-super-structured-pattern">
+              super-structured data
+            </a>
+            .
+          </p>
+          <p>
+            The <a href="https://zed.brimdata.io/docs/formats">storage layer</a>
+            , <a href="https://zed.brimdata.io/docs/formats/zed">type system</a>
+            ,{" "}
+            <a href="https://zed.brimdata.io/docs/language/overview">
+              query language
+            </a>
+            , and <a href="https://zed.brimdata.io/docs/commands/zq">zq</a>{" "}
+            command-line utility are just a few of the tools Zed offers to the
+            data community.
+          </p>
+          <a
+            className={styles.primaryButton}
+            href="https://zed.brimdata.io/docs"
+          >
+            Learn More
+          </a>
+        </div>
+      </div>
+
+      <div className={styles.wrap}></div>
     </Layout>
   );
 }
