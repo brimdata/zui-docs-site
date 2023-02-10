@@ -72,7 +72,7 @@ export default function Home() {
       <div className={styles.features}>
         <ul>
           <li>Drag-And-Drop Ingest</li>
-          <li>Schema Inferance</li>
+          <li>Schema Inference</li>
           <li>Named Queries</li>
           <li>Filters And Pivots</li>
         </ul>
