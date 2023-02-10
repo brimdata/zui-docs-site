@@ -13,8 +13,8 @@ export default function Home() {
 
   return (
     <Layout
-      title={`The Zed Project`}
-      description="Super-structured Zed makes cleaning and wrangling data easy."
+      title={`Zui`}
+      description="A desktop application for working with data. Powered by Zed. The official front-end to the Zed lake."
     >
       <Head>
         <html className={styles.html} />
