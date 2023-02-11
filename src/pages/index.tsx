@@ -93,7 +93,7 @@ export default function Home() {
         <div>
           <h3>What Is Zed?</h3>
           <p>
-            Zed is system for managing, storing, and processing data. It's a{" "}
+            Zed is a system for managing, storing, and processing data. It's a{" "}
             <b>superset</b> of both schema-defined <b>tables</b>, and{" "}
             <b>unstructured documents</b>; an emerging concept we call{" "}
             <a href="https://zed.brimdata.io/docs/formats#2-zed-a-super-structured-pattern">
