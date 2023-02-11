@@ -13,11 +13,12 @@ export default function Home() {
 
   return (
     <Layout
-      title={`Zui`}
-      description="A desktop application for working with data. Powered by Zed. The official front-end to the Zed lake."
+      title="Zui | Zed User Interface"
+      description="A desktop application for working with data. Powered by Zed."
     >
       <Head>
         <html className={styles.html} />
+        <meta property="og:title" content="Zui: Zed User Interface" />
       </Head>
       <div className={styles.gridTexture}>
         <div className={styles.radialGradient}></div>

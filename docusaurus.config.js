@@ -52,11 +52,11 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: "img/zed-social-image.jpg",
+      image: "img/zui-social-image.jpg",
       metadata: [
-        { name: "twitter:card", content: "summary" },
+        { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:site", content: "@brimdata" },
-        { name: "twitter:image:alt", content: "Zed Documentation Image" },
+        { name: "twitter:image:alt", content: "Zui Desktop Application Image" },
       ],
       navbar: {
         title: "Zui",
@@ -108,7 +108,7 @@ const config = {
               },
               {
                 label: "GitHub",
-                href: "https://github.com/brimdata",
+                href: "https://github.com/brimdata/zui",
               },
             ],
           },
