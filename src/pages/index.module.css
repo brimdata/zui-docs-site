@@ -12,6 +12,8 @@
 .wrap {
   max-width: 1200px;
   margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 
@@ -67,7 +69,7 @@
 .boxedSubtitle {
   color: white;
   text-transform: uppercase;
-  font-size: 30px;
+  font-size: 1.875rem;
   line-height: 42px;
   font-weight: 100;
   letter-spacing: 2.77px;
@@ -86,7 +88,7 @@
   background: var(--orange);
   border-radius: 4px;
   line-height: 42px;
-  font-size: 22px;
+  font-size: 1.375rem;
   letter-spacing: 3px;
   font-weight: 900;
   text-transform: uppercase;
@@ -107,7 +109,7 @@
 
 .subText {
   color: #808891;
-  font-size: 18px;
+  font-size: 1.125rem;
   margin: 0;
 }
 
@@ -139,7 +141,6 @@
 
 .gridContent {
   position: relative;
-  padding-bottom: 100px;
 }
 
 .dotTexture {
@@ -154,7 +155,7 @@
 .screenShot {
   position: relative;
   display: flex;
-  padding: 4%;
+  padding: 2rem;
   background: url(/img/decoration-swoosh.svg);
   background-position: center center;
   background-repeat: no-repeat;
@@ -195,11 +196,11 @@
 .tagline {
   text-align: center;
   font-weight: normal;
-  font-size: 30px;
+  font-size: 1.875rem;
   color: white;
   position: relative;
-  margin-top: 20vh;
-  margin-bottom: 5vh;
+  margin-top: 7rem;
+  margin-bottom: 3rem;
 }
 
 @media screen and (max-width: 580px) {
@@ -238,7 +239,7 @@
   background-position: center center;
   background-size: 4000px 500px;
   background-repeat: no-repeat;
-  min-height: 600px;
+  height: 600px;
   color: white;
   display: flex;
   align-items: center;
@@ -254,7 +255,7 @@
 
 .features li {
   text-transform: uppercase;
-  font-size: 30px;
+  font-size: 1.875rem;
   letter-spacing: 2.77px;
   list-style-type: none;
   margin: 2em 0;
@@ -273,14 +274,13 @@
 
 .zedDescription {
   text-align: center;
-  margin-top: rem;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   margin-top: 160px;
   margin-bottom: 160px;
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 .zedDescription .primaryButton {
@@ -288,8 +288,9 @@
 }
 
 .zedDescription h3 {
-  font-size: 60px;
+  font-size: 3.75rem;
   margin-bottom: 40px;
+  margin-top: 40px;
 }
 
 .zedDescription > *:nth-child(1) {
@@ -300,4 +301,21 @@
 .zedDescription>*:nth-child(2) {
   text-align: left;
   flex: 1;
+}
+
+@media screen and (max-width: 650px) {
+  .zedDescription {
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+  }
+
+  .zedDescription >*:nth-child(2) {
+    text-align: center;
+  }
+  
+
+  html, body {
+    font-size: 13px;
+    }
 }
