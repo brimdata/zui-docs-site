@@ -1,0 +1,59 @@
+name: Deploy to Netlify
+
+on:
+  push:
+    branches:
+      - main
+  repository_dispatch:
+    types: [zui-docs-update]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy to Netlify
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build site
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+          cache: yarn
+      - name: Build
+        run: make build
+      # Popular action to deploy to Netlify:
+      # Docs: https://github.com/marketplace/actions/netlify-actions
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v1.2
+        with:
+          # Build output to publish to Netlify
+          publish-dir: ./build
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          production-branch: init
+          production-deploy: true
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+      - name: Check for broken links
+        uses: ruzickap/action-my-broken-link-checker@v2
+        with:
+          url: https://zui.brimdata.io
+          cmd_params:
+            --verbose
+            --buffer-size=8192
+            --max-response-body-size 1000000000
+            --header="User-Agent:Mozilla/5.0"
+            --header="Accept-Encoding:zstd,br,gzip,deflate"
+            --exclude algolia.net
+            --exclude github.com\/brimdata\/.*\/edit\/
+            --exclude www.googletagmanager.com
+            --exclude https://support.virustotal.com/hc/en-us/articles/115002146769-Comments
+            --exclude https://github.com/brimdata/brimcap#
+            --exclude https://github.com/brimdata/build-suricata.*#
+            --exclude https://github.com/brimdata/brimcap/wiki.*#
+
+#      - name: Trigger Algolia Crawler
+#        run: |
+#          curl -X POST -H "Content-Type: application/json" --fail-with-body \
+#               --user "${{ secrets.ALGOLIA_CRAWLER_APP_ID }}:${{ secrets.ALGOLIA_CRAWLER_API_KEY }}" \
+#               "https://crawler.algolia.com/api/1/crawlers/${{ secrets.ALGOLIA_CRAWLER_ID }}/reindex"

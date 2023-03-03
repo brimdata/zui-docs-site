@@ -1,0 +1,60 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  
+  --blue: #2F4770;
+  --orange: hsl(30, 100%, 50%);
+  --black: #111824;
+  
+  --ifm-color-primary: var(--orange);
+  --ifm-font-family-base: "protipo", "sans-serif";
+  --imf-font-color-base: var(--black)
+  --ifm-color-content: var(--black);
+  --ifm-hero-text-color: var(--black);
+  --ifm-heading-font-weight: 900;
+  --ifm-color-primary-darkest: #702D00;
+
+  --ifm-color-primary: #eb7500;
+  --ifm-color-primary-dark: #d36900;
+  --ifm-color-primary-darker: #c86300;
+  --ifm-color-primary-darkest: #702D00;
+  --ifm-color-primary-light: #ff8103;
+  --ifm-color-primary-lighter: #ff870f;
+  --ifm-color-primary-lightest: #ff9832;
+
+  --ifm-font-size-base: 110%;
+  
+} 
+
+@media screen and (max-width: 996px) {
+  :root {
+    --ifm-font-size-base: 100%;
+  }
+  .markdown h1:first-child {
+    --ifm-h1-font-size: 2.4rem
+  }
+}
+
+.docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+[data-theme='dark'] .docusaurus-highlight-code-line {
+  background-color: var(--black);
+}
+
+.footer--dark {
+  --ifm-footer-background-color: var(--black);
+}
+
+.markdown a {
+  font-weight: 500;
+}
