@@ -1,5 +1,4 @@
-#REF = main
-REF = zuifi-wiki
+REF = main
 LATEST = $(shell jq -r '.[0]' versions.json)
 
 .PHONY: fetch
