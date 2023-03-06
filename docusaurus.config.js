@@ -52,6 +52,9 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+        disableSwitch: true,
+      },
       image: "img/zui-social-image.jpg",
       metadata: [
         { name: "twitter:card", content: "summary_large_image" },
@@ -72,13 +75,18 @@ const config = {
             label: "Docs",
           },
           {
-            href: "https://zed.brimdata.io/docs",
-            label: "Zed Docs",
+            type: "html",
             position: "right",
+            value: `<div class="github-button-wrap"><iframe
+                  src="https://ghbtns.com/github-btn.html?user=brimdata&amp;repo=zui&amp;type=star&amp;count=true&amp;size=medium"
+                  width="99"
+                  height="20"
+                  title="GitHub Stars"
+                /></div>`,
           },
           {
-            href: "https://github.com/brimdata",
-            label: "GitHub",
+            href: "https://zed.brimdata.io/docs",
+            label: "Zed Docs",
             position: "right",
           },
         ],

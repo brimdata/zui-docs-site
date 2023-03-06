@@ -13,7 +13,7 @@
   
   --ifm-color-primary: var(--orange);
   --ifm-font-family-base: "protipo", "sans-serif";
-  --imf-font-color-base: var(--black)
+  --ifm-font-color-base: var(--black)
   --ifm-color-content: var(--black);
   --ifm-hero-text-color: var(--black);
   --ifm-heading-font-weight: 900;
@@ -28,7 +28,10 @@
   --ifm-color-primary-lightest: #ff9832;
 
   --ifm-font-size-base: 110%;
-  
+  --ifm-menu-color: --black;
+  --ifm-font-size-base: 100%;  
+  --ifm-navbar-padding-vertical: 6px;
+  --ifm-navbar-height: min-content;
 } 
 
 @media screen and (max-width: 996px) {
@@ -57,4 +60,44 @@
 
 .markdown a {
   font-weight: 500;
+}
+
+.menu {
+  font-weight: 400;
+}
+
+.menu__link,
+.menu__caret {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-radius: 0;
+  transition: none;
+}
+
+.menu__list-item-collapsible {
+  border-radius: 0;
+  transition: none;
+}
+
+.menu__link--active {
+  font-weight: bold;
+}
+
+.menu__caret::before,
+.menu__link--sublist-caret:after {
+  background: var(--ifm-menu-link-sublist-icon) 50% / 1rem 1rem;
+}
+
+.github-button-wrap {
+  display: flex;
+}
+
+.navbar__item {
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+.navbar__title {
+  font-size: 1.66rem;
+  font-weight: 900;
 }
