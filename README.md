@@ -5,9 +5,9 @@ source and configuration files for generating the static website
 for the public documentation of the open-source Zui project.
 
 All content for the documentation is stored in markdown files
-in the [`docs` directory](https://github.com/brimdata/brim/tree/main/docs)
+in the [`docs` directory](https://github.com/brimdata/zui/tree/main/docs)
 of the
-[Zui repository](https://github.com/brimdata/brim).
+[Zui repository](https://github.com/brimdata/zui).
 
 ### Setup
 
@@ -21,12 +21,12 @@ $ yarn
 To edit or author new documentation, it's easiest to clone the Zui repository
 into the same top-level directory as this repo and simply run `make dev`
 in this repo.  This will create a symlink from called `docs` in
-this directory that points to `../brim/docs`, launches the local docusaurus
+this directory that points to `../zui/docs`, launches the local docusaurus
 server, and directs your browser to this server.
 
 You can ctrl-C the `make dev` process to stop the server.
 
-Any edits you make to files in ../brim/docs will be immediatedly re-rendered
+Any edits you make to files in ../zui/docs will be immediatedly re-rendered
 by the docusaurus server.
 
 ### Rendering from Zui repo
