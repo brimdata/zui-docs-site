@@ -37,7 +37,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl: ({ docPath }) =>
-            `https://github.com/brimdata/brim/edit/zuifi-wiki/docs/${docPath}`,
+            `https://github.com/brimdata/zui/edit/main/docs/${docPath}`,
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
