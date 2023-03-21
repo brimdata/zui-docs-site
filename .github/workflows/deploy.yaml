@@ -51,6 +51,16 @@ jobs:
             --exclude https://github.com/brimdata/brimcap#
             --exclude https://github.com/brimdata/build-suricata.*#
             --exclude https://github.com/brimdata/brimcap/wiki.*#
+      - name: Inform Slack users of failure
+        uses: tiloio/slack-webhook-action@v1.1.2
+        if: ${{ failure() }}
+        with:
+          slack_web_hook_url: ${{ secrets.SLACK_WEBHOOK_BRIMLABS_DOCS }}
+          slack_json: |
+            {
+              "username": "{{GITHUB_REPOSITORY}}",
+              "text": "Deploy failed: https://github.com/{{GITHUB_REPOSITORY}}/actions/runs/{{GITHUB_RUN_ID}}"
+            }
 
 #      - name: Trigger Algolia Crawler
 #        run: |
