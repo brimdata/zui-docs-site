@@ -22,5 +22,5 @@ version: fetch
 .PHONY: dev
 dev:
 	@rm -rf docs
-	@ln -s ../zui/docs
+	@ln -s ../zui/apps/zui/docs
 	@yarn start
