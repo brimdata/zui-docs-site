@@ -6,7 +6,7 @@ fetch:
 	@rm -rf docs tmp
 	@mkdir tmp
 	@git clone --depth=1 -b $(REF) --single-branch https://github.com/brimdata/zui tmp
-	@mv tmp/docs docs
+	@mv tmp/apps/zui/docs docs
 	@rm -rf tmp
 
 .PHONY: build
@@ -22,5 +22,5 @@ version: fetch
 .PHONY: dev
 dev:
 	@rm -rf docs
-	@ln -s ../zui/docs
+	@ln -s ../zui/apps/zui/docs
 	@yarn start
