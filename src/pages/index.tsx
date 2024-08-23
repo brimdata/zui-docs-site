@@ -42,9 +42,6 @@ export default function Home() {
               >
                 Download
               </a>
-              <p className={clsx(styles.subText, styles.versionNumber)}>
-                v1.0.0
-              </p>
             </div>
           </div>
 
